@@ -113,8 +113,169 @@ header {
 
 .content {
   width: 100%;
-  height: 1000px;
   padding-top: 100px;
+}
+
+.indexBanner {
+  background-color: #ffffff;
+  height: 246px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.indexInnerBan {
+  height: 100%px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.indexInnerBan a {
+  background-color: #efebe1;
+  color: #26c208;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  align-self: flex-end;
+  padding: 10px;
+  width: 100px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.indexText {
+  height: 294px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.indexInnerTxt p {
+  color: #1f9c07;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.indexVideos {
+  background-color: #3b3937;
+}
+
+.indexInnerVid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.indexInnerVid h2 {
+  width: 90%;
+  align-self: center;
+  color: #26c208;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.indexVidDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.indexVidDetails img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.indexSponsor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  height: 500px;
+}
+
+.indexInnerSpons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 40%;
+  height: 100%;
+}
+
+.indexInnerSpons img {
+  width: 100%;
+}
+
+.indexContact {
+  background-color: #3b3937;
+}
+
+.indexInnerCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.indexInnerCon h2 {
+  width: 80%;
+  color: #26c208;
+  font-size: 18px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.indexForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+
+.indexForm h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #26c208;
+  margin-bottom: 5px;
+}
+.indexName,
+.indexMail {
+  height: 23px;
+  margin-bottom: 10px;
+  border: none;
+  width: 80%;
+  padding: 3px;
+}
+
+.indexForm textarea {
+  margin-bottom: 20px;
+  border: none;
+  padding: 3px;
+}
+
+.indexSub {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #26c208;
+  background-color: #efebe1;
+  cursor: pointer;
 }
 
 /*------------------------------------------------------------------------*/
@@ -149,5 +310,89 @@ footer {
 
   .bigMenu {
     display: flex;
+  }
+  .indexInnerSpons {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .indexInnerSpons a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .indexInnerSpons img {
+    width: 70%;
+  }
+}
+
+/*------------------------------------------------------------------------*/
+
+/*--- Fra ipad til desktop -----------------------------------------------*/
+
+/*------------------------------------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+  .indexVidDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .indexVidDetails img {
+    width: 30%;
+    padding: 1%;
+  }
+
+  .indexInnerVid h2 {
+    width: 79%;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .indexBanner {
+    height: 400px;
+  }
+
+  .indexInnerBan {
+    width: 700px;
+  }
+
+  .indexSponsor {
+    padding: 0px;
+  }
+
+  .indexInnerSpons {
+    width: 700px;
+  }
+
+  .indexContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .indexInnerCon {
+    width: 700px;
+  }
+}
+
+/*------------------------------------------------------------------------*/
+
+/*--- stopklods ----------------------------------------------------------*/
+
+/*------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1200px) {
+  .indexVidDetails {
+    width: 1200px;
   }
 }
