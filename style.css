@@ -33,6 +33,7 @@ header {
   position: fixed;
   justify-content: center;
   background-color: #3b393743;
+  backdrop-filter: blur(5px);
 }
 
 .menuOverlay.show {
@@ -130,7 +131,7 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .indexInnerBan a {
@@ -148,23 +149,41 @@ header {
   border-radius: 25px;
 }
 
+.indexInnerBan p {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 60%;
+  color: #1f9c07;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .indexText {
-  height: 294px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.indexInnerTxt {
+  width: 80%;
 }
 
 .indexInnerTxt p {
   color: #1f9c07;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
+  text-align: center;
+  line-height: 24px;
 }
 
 .indexVideos {
   background-color: #3b3937;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .indexInnerVid {
@@ -191,13 +210,28 @@ header {
   width: 90%;
 }
 
-.indexVidDetails img {
+.indexVidName {
   width: 100%;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.indexVidName h3 {
+  margin-top: 5%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #26c208;
+}
+
+.indexVidName video {
+  width: 100%;
 }
 
 .indexSponsor {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 10%;
@@ -205,16 +239,28 @@ header {
   height: 500px;
 }
 
+.indexSponsor h2 {
+  width: 90%;
+  color: #26c208;
+  font-size: 18px;
+  margin-bottom: 5%;
+}
+
 .indexInnerSpons {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 40%;
-  height: 100%;
+  height: 90%;
+}
+
+.indexInnerSpons a:hover {
+  filter: grayscale(1) blur(1px);
 }
 
 .indexInnerSpons img {
   width: 100%;
+  border-radius: 25px;
 }
 
 .indexContact {
@@ -311,6 +357,16 @@ footer {
   .bigMenu {
     display: flex;
   }
+
+  .indexInnerBan p {
+    font-size: 30px;
+  }
+
+  .indexText {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
   .indexInnerSpons {
     width: 100%;
     flex-direction: row;
@@ -345,9 +401,13 @@ footer {
     width: 100%;
   }
 
-  .indexVidDetails img {
+  .indexVidName {
     width: 30%;
-    padding: 1%;
+    margin: 1%;
+  }
+
+  .indexVidName video {
+    width: 100%;
   }
 
   .indexInnerVid h2 {
@@ -365,8 +425,19 @@ footer {
     width: 700px;
   }
 
+  .indexInnerBan p {
+    margin-top: 30px;
+    font-size: 40px;
+  }
+
   .indexSponsor {
     padding: 0px;
+  }
+
+  .indexSponsor h2 {
+    width: 79%;
+    margin-top: 5%;
+    margin-bottom: 0px;
   }
 
   .indexInnerSpons {
