@@ -14,6 +14,7 @@ header {
   height: 100px;
   display: flex;
   position: fixed;
+  z-index: 10;
 }
 
 .innerHeader {
@@ -49,13 +50,13 @@ header {
   padding: 10px;
   text-align: center;
   text-decoration: none;
-  color: #3b3937;
+  color: #1f9c07;
   font-weight: 600;
 }
 
 .menuList li a:hover {
-  background-color: #3b3937;
-  color: #26c208;
+  background-color: #1f9c07;
+  color: #3b3937;
 }
 
 .menu {
@@ -104,6 +105,11 @@ header {
 
 .logo {
   align-self: center;
+  margin-left: 10px;
+}
+
+.logo img {
+  width: 60px;
 }
 
 /*------------------------------------------------------------------------*/
@@ -115,11 +121,19 @@ header {
 .content {
   width: 100%;
   padding-top: 100px;
+  display: flex;
+  flex-direction: column;
 }
+
+/*------------------------------------------------------------------------*/
+
+/*- Her starter alt til index --------------------------------------------*/
+
+/*------------------------------------------------------------------------*/
 
 .indexBanner {
   background-color: #ffffff;
-  height: 246px;
+  height: 400px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -127,11 +141,14 @@ header {
 }
 
 .indexInnerBan {
-  height: 100%px;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: url("media/img/banner.jpg");
+  background-size: cover;
+  background-position: -50px;
 }
 
 .indexInnerBan a {
@@ -149,11 +166,16 @@ header {
   border-radius: 25px;
 }
 
+.indexInnerBan a:hover {
+  background-color: #26c208;
+  color: #efebe1;
+}
+
 .indexInnerBan p {
   margin-left: 20px;
   margin-top: 20px;
   width: 60%;
-  color: #1f9c07;
+  color: #efebe1;
   font-size: 20px;
   font-weight: 600;
 }
@@ -324,6 +346,364 @@ header {
   cursor: pointer;
 }
 
+.indexSub:hover {
+  background-color: #26c208;
+  color: #efebe1;
+}
+
+/*------------------------------------------------------------------------*/
+
+/*- Her slutter alt til index --------------------------------------------*/
+
+/*------------------------------------------------------------------------*/
+/**/
+/**/
+/**/
+/*------------------------------------------------------------------------*/
+
+/*- Her starter alt til kategori -----------------------------------------*/
+
+/*------------------------------------------------------------------------*/
+
+.kategori-boks1 {
+  background-color: #ffffff;
+  padding-top: 100px;
+  position: relative;
+  color: white;
+  height: 400px;
+  background-image: url("media/img/pageimg/kategorierimg.png");
+  background-size: cover;
+}
+
+.kategori-header-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #efebe1;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.pc-couple {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kategori-minibox-left {
+  width: 100%;
+}
+
+.kategori-minibox-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.kategori-boks2 {
+  margin: 100px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kategori-text-dark {
+  color: #1f9c07;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 24px;
+  width: 60%;
+}
+
+.kategori-text-light {
+  display: flex;
+  margin: auto;
+  color: #26c208;
+}
+
+.kategori-boks-liste {
+  background-color: #3b3937;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.kategori-boks-liste p {
+  width: 100%;
+}
+
+.kategori-img {
+  margin-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  margin: 30px auto;
+  width: 80%;
+}
+
+.kategori-button-text {
+  background-color: #efebe1;
+  color: #26c208;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: center;
+  border-radius: 25px;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+.kategori-button-text:hover {
+  background-color: #26c208;
+  color: #efebe1;
+}
+
+/*------------------------------------------------------------------------*/
+
+/*- Her slutter alt til kategori -----------------------------------------*/
+
+/*------------------------------------------------------------------------*/
+/**/
+/**/
+/**/
+/*------------------------------------------------------------------------*/
+
+/*- Her starter alt til tutorial og learning -----------------------------*/
+
+/*------------------------------------------------------------------------*/
+.learning {
+  height: 500px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-image: url("media/img/pageimg/laeringimg.png");
+  background-size: cover;
+}
+
+.tutorial {
+  height: 500px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-image: url("media/img/pageimg/tutorialsimg.png");
+  background-size: cover;
+}
+
+.learning h1 {
+  color: #efebe1;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.tutorial h1 {
+  color: #efebe1;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+/* Her styler vi beskrivelsen af kategorien */
+.tutorialbeskrivelse {
+  background-color: #efebe1;
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+  font-size: 26px;
+}
+
+.tutorialbeskrivelse p {
+  color: #1f9c07;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 24px;
+}
+/* Her styler vi baggrunden der ligger fra v. til h. i hele længden bag videoerne */
+.baggrundtut {
+  background-color: #3b3937;
+  padding-bottom: 50px;
+}
+/* Her styler vi hvor videoerne skal være og hvor store boksne skal være */
+.tutorialvideoer div {
+  background-color: #3b3937;
+  justify-content: center;
+  display: grid;
+}
+
+.tutvideo1,
+.tutvideo2,
+.tutvideo3,
+.tutvideo4 {
+  margin-top: 20px;
+}
+
+/* Her styler vi udseendet af teksten */
+.tut-tekst {
+  margin-top: 15px;
+}
+/* Her styler vi hvordan samarbejdspartner skal ligge */
+.tutorialpartner div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Her styler vi billederne af samarbejdspartner */
+.imgPartner a {
+  margin: 10px;
+}
+
+.imgPartner img {
+  border-radius: 25px;
+}
+/*------------------------------------------------------------------------*/
+
+/*- Her slutter alt til tutorial og learning -----------------------------*/
+
+/*------------------------------------------------------------------------*/
+/**/
+/**/
+/**/
+/*------------------------------------------------------------------------*/
+
+/*- Her starter alt til kontakt ------------------------------------------*/
+
+/*------------------------------------------------------------------------*/
+
+.contBanner {
+  height: 400px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("media/img/pageimg/kontaktimg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -100px;
+}
+
+.contBanner h1 {
+  color: #efebe1;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.about {
+  width: 90%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about,
+.contact {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.about h2 {
+  display: block;
+  width: 90%;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #26c208;
+  font-weight: 600;
+  align-self: center;
+}
+
+.about p {
+  width: 90%;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #1f9c07;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.contContact {
+  background-color: #3b3937;
+}
+
+.contInnerCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.contInnerCon h2 {
+  width: 80%;
+  color: #26c208;
+  font-size: 18px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.contForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+
+.contForm h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #26c208;
+  margin-bottom: 5px;
+}
+.contName,
+.contMail {
+  height: 23px;
+  margin-bottom: 10px;
+  border: none;
+  width: 80%;
+  padding: 3px;
+}
+
+.contForm textarea {
+  margin-bottom: 20px;
+  border: none;
+  padding: 3px;
+}
+
+.contSub {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #26c208;
+  background-color: #efebe1;
+  cursor: pointer;
+}
+
+/*------------------------------------------------------------------------*/
+
+/*- Her slutter alt til kontakt-------------------------------------------*/
+
+/*------------------------------------------------------------------------*/
+/**/
+/**/
+/**/
 /*------------------------------------------------------------------------*/
 
 /*- Her slutter alt indhold ----------------------------------------------*/
@@ -365,6 +745,8 @@ footer {
   .indexText {
     padding-top: 10%;
     padding-bottom: 10%;
+    width: 70%;
+    align-self: center;
   }
 
   .indexInnerSpons {
@@ -384,11 +766,19 @@ footer {
   .indexInnerSpons img {
     width: 70%;
   }
+
+  .kategori-minibox-right p {
+    margin-top: 40px;
+  }
+
+  .contBanner {
+    background-position: 0px;
+  }
 }
 
 /*------------------------------------------------------------------------*/
 
-/*--- Fra ipad til desktop -----------------------------------------------*/
+/*--- Fra ipad til desktop - 700px, 800 px og 940px ----------------------*/
 
 /*------------------------------------------------------------------------*/
 
@@ -418,11 +808,15 @@ footer {
   }
 
   .indexBanner {
-    height: 400px;
+    height: 500px;
+    background-image: url("media/img/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .indexInnerBan {
     width: 700px;
+    background-image: none;
   }
 
   .indexInnerBan p {
@@ -453,6 +847,101 @@ footer {
 
   .indexInnerCon {
     width: 700px;
+  }
+
+  .pc-couple {
+    flex-direction: column;
+  }
+
+  .kategori-img {
+    width: 100%;
+  }
+
+  .kategori-minibox-left {
+    width: 50%;
+  }
+
+  .kategori-minibox-right {
+    width: 50%;
+  }
+
+  .kategori-button-text {
+    margin-top: 20px;
+  }
+
+  .contContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contInnerCon {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* Her styler vi af videoerne skal være ved siden af hinanden */
+  .tutorialvideoer div {
+    display: flex;
+    align-items: center;
+  }
+  /* Her styler vi støttelsen på padding rundt om videoerne */
+  .tutvideo1 video {
+    padding: 15px;
+  }
+  .tutvideo2 video {
+    padding: 15px;
+  }
+  .tutvideo3 video {
+    padding: 15px;
+  }
+  .tutvideo4 video {
+    padding: 15px;
+  }
+  /* Her styler vi hvordan videoerne skal være placeret i forhold til videoen */
+  .tutvideo1 {
+    display: flex;
+    background-color: #3b3937;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tutvideo2 {
+    display: flex;
+    background-color: #3b3937;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tutvideo3 {
+    display: flex;
+    background-color: #3b3937;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tutvideo4 {
+    display: flex;
+    background-color: #3b3937;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Her placerer vi teksten under videoen */
+  .tut-tekst {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  /* kategori siden */
+  .pc-couple {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .kategori-minibox-right {
+    align-self: flex-start;
+    width: 40%;
   }
 }
 
