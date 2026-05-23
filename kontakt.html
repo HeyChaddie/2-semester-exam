@@ -11,6 +11,37 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "Qy4FGZePdSCleEptD",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .querySelector(".contForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("service_pxyy60m", "template_42bj005", this).then(
+              () => {
+                console.log("SUCCESS!");
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              },
+            );
+          });
+      };
+    </script>
   </head>
   <body>
     <header>
@@ -25,7 +56,9 @@
       </div>
       <div class="innerHeader">
         <div class="logo">
-          <a href="index.html"><img src="media/logo/fgg-logo-border.webp" alt="logo" /></a>
+          <a href="index.html"
+            ><img src="media/logo/fgg-logo-border.webp" alt="logo"
+          /></a>
         </div>
         <div class="menu">
           <button id="menuBtn">☰</button>
@@ -46,42 +79,75 @@
       <section class="about">
         <h2>Om Os</h2>
         <p>
-          Velkommen til Forældrenes Gaming Guide – et sted skabt for forældre, der ønsker at forstå den digitale verden,
-          som børn og unge bruger så meget tid i. Gaming er i dag en naturlig del af mange børns hverdag, og for mange
-          familier kan det være svært at følge med i spil, trends, online fællesskaber og skærmvaner. Derfor er vi her
+          Velkommen til Forældrenes Gaming Guide – et sted skabt for forældre,
+          der ønsker at forstå den digitale verden, som børn og unge bruger så
+          meget tid i. Gaming er i dag en naturlig del af mange børns hverdag,
+          og for mange familier kan det være svært at følge med i spil, trends,
+          online fællesskaber og skærmvaner. Derfor er vi her
         </p>
         <p>
-          Vi arbejder for at gøre gaming mere gennemsigtigt, trygt og forståeligt for forældre. Gennem guides, artikler
-          og anbefalinger hjælper vi familier med at skabe sunde gamingvaner og gode samtaler om både skærmtid, online
-          adfærd og digitale fællesskaber.
+          Vi arbejder for at gøre gaming mere gennemsigtigt, trygt og
+          forståeligt for forældre. Gennem guides, artikler og anbefalinger
+          hjælper vi familier med at skabe sunde gamingvaner og gode samtaler om
+          både skærmtid, online adfærd og digitale fællesskaber.
         </p>
 
         <p>
-          Vores mål er at skabe tryghed omkring gaming og gøre det lettere for familier at tale om spil, skærmtid og
-          online fællesskaber.
+          Vores mål er at skabe tryghed omkring gaming og gøre det lettere for
+          familier at tale om spil, skærmtid og online fællesskaber.
+        </p>
+      </section>
+      <section class="about">
+        <h2>Kontakt Os</h2>
+        <p>
+          Hos Forældrenes Gaming Guide, er du altid velkommen til at kontakte
+          os. Vi er hyppigt på minecraft, så det betyder at vi selvfølgelig også
+          er hyppigt til rådeighed, hvis der skulle opstå nogle spørgsmål!
+          Kontakt os endelig, og vi er til at række ud til i almindelide
+          arbejdstider og hverdage, og svarer normalt indenfor 1-2 dage!
         </p>
       </section>
       <div class="contContact">
         <div class="contInnerCon">
           <h2>Kontakt Os</h2>
-          <form class="contForm">
+          <form class="indexForm">
             <h3>Navn</h3>
-            <input type="text" class="contName" placeholder="Dit name.." />
+            <input
+              type="text"
+              name="input-name"
+              class="indexName"
+              placeholder="Dit name.."
+            />
 
             <h3>Email</h3>
-            <input type="text" class="contMail" placeholder="Din mail.." />
+            <input
+              type="text"
+              name="input-email"
+              class="indexMail"
+              placeholder="Din mail.."
+            />
 
             <h3>Emne</h3>
-            <input type="text" class="contMail" placeholder="Dit emne.." />
+            <input
+              type="text"
+              name="input-subject"
+              class="indexMail"
+              placeholder="Dit emne.."
+            />
 
             <h3>Besked</h3>
-            <textarea placeholder="Din besked her.." style="height: 200px"></textarea>
+            <textarea
+              name="input-message"
+              placeholder="Din besked her.."
+              style="height: 200px"
+            ></textarea>
 
-            <input type="submit" class="contSub" value="Send besked" />
+            <input type="submit" class="indexSub" value="Send besked" />
           </form>
         </div>
       </div>
     </div>
+
     <footer>
       <p>&copy; 2026 - Forældrenes Gaming Guide</p>
     </footer>
