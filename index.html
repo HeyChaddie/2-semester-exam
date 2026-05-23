@@ -15,7 +15,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
       (function () {
-        // https://dashboard.emailjs.com/admin/account
         emailjs.init({
           publicKey: "Qy4FGZePdSCleEptD",
         });
@@ -23,20 +22,17 @@
     </script>
     <script>
       window.onload = function () {
-        document
-          .querySelector(".indexForm")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            // these IDs from the previous steps
-            emailjs.sendForm("service_pxyy60m", "template_42bj005", this).then(
-              () => {
-                console.log("SUCCESS!");
-              },
-              (error) => {
-                console.log("FAILED...", error);
-              },
-            );
-          });
+        document.querySelector(".indexForm").addEventListener("submit", function (event) {
+          event.preventDefault();
+          emailjs.sendForm("service_pxyy60m", "template_42bj005", this).then(
+            () => {
+              console.log("SUCCESS!");
+            },
+            (error) => {
+              console.log("FAILED...", error);
+            },
+          );
+        });
       };
     </script>
   </head>
@@ -53,9 +49,7 @@
       </div>
       <div class="innerHeader">
         <div class="logo">
-          <a href="index.html"
-            ><img src="media/logo/fgg-logo-border.webp" alt="logo"
-          /></a>
+          <a href="index.html"><img src="media/logo/fgg-logo-border.webp" alt="logo" /></a>
         </div>
         <div class="menu">
           <button id="menuBtn">☰</button>
@@ -83,14 +77,11 @@
           <h1>Velkommen til vores læringsunivers!</h1>
           <br />
           <p class="introtekst">
-            Her bruger vi Minecraft som mere end bare et spil. Vi hjælper børn
-            og familier med lille eller ingen erfaring med gaming ved at lære
-            gennem kreativitet, teknik og sjov.
+            Her bruger vi Minecraft som mere end bare et spil. Vi hjælper børn og familier med lille eller ingen
+            erfaring med gaming ved at lære gennem kreativitet, teknik og sjov.
           </p>
           <br />
-          <p class="introtekst">
-            Hos os er læring et eventyr, hvor alle kan være med.
-          </p>
+          <p class="introtekst">Hos os er læring et eventyr, hvor alle kan være med.</p>
         </div>
       </div>
 
@@ -126,10 +117,7 @@
           <a href="https://www.rg2610.dk/esport-2026" target="_blank">
             <img src="media/img/group.png" alt="roedovregaming"
           /></a>
-          <a
-            href="https://politi.dk/om-politiet/virksomheden/politiets-online-patrulje"
-            target="_blank"
-          >
+          <a href="https://politi.dk/om-politiet/virksomheden/politiets-online-patrulje" target="_blank">
             <img src="media/img/police.png" alt="politietsonlinepatrulje"
           /></a>
         </div>
@@ -140,35 +128,16 @@
           <h2>Kontakt Os</h2>
           <form class="indexForm">
             <h3>Navn</h3>
-            <input
-              type="text"
-              name="input-name"
-              class="indexName"
-              placeholder="Dit name.."
-            />
+            <input type="text" name="input-name" class="indexName" placeholder="Dit name.." />
 
             <h3>Email</h3>
-            <input
-              type="text"
-              name="input-email"
-              class="indexMail"
-              placeholder="Din mail.."
-            />
+            <input type="text" name="input-email" class="indexMail" placeholder="Din mail.." />
 
             <h3>Emne</h3>
-            <input
-              type="text"
-              name="input-subject"
-              class="indexMail"
-              placeholder="Dit emne.."
-            />
+            <input type="text" name="input-subject" class="indexMail" placeholder="Dit emne.." />
 
             <h3>Besked</h3>
-            <textarea
-              name="input-message"
-              placeholder="Din besked her.."
-              style="height: 200px"
-            ></textarea>
+            <textarea name="input-message" placeholder="Din besked her.." style="height: 200px"></textarea>
 
             <input type="submit" class="indexSub" value="Send besked" />
           </form>
